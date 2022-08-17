@@ -21,6 +21,7 @@ repositories {
 }
 
 node {
+    // 16系はパッケージとの互換性がない可能性がある
     version = '16.14.2'
     download = true
 }
@@ -32,6 +33,11 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
+// task script-name in pacakge-json (dependsOn: ['npm_run_command'])
+task webpack(dependsOn: ['npm_run_webpack'])
+task dev(dependsOn: ['npm_run_dev'])
+task format(dependsOn: ['npm_run_format'])
 
 tasks.named('test') {
 	useJUnitPlatform()
