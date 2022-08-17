@@ -3,8 +3,14 @@
   <head>
     <title>Hello</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" th:href="@{/css/tailwind.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
   </head>
   <body>
-    <h2><span th:text="${message}"></span></h2>
+    <header class="text-center font-bold">
+      <span th:text="${message}" class="text-lg"></span>
+    </header>
+
+    <script th:src="@{/js/main.bundle.js}"></script>
   </body>
 </html>
