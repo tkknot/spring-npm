@@ -27,7 +27,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       // cssを別ファイルとして書き出し
-      filename: './css/[name].css',
+      filename: './css/style.css',
     }),
 
     // バンドルの際に不要なファイルを削除
@@ -56,6 +56,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           // .css 内の URL パスなどをそれぞれの publicPath に合わせてくれる
           'css-loader',
+          // postcssを使う
+          'postcss-loader',
           // .sass のビルド
           'sass-loader',
         ],

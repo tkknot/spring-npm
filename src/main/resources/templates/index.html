@@ -3,13 +3,18 @@
   <head>
     <title>Hello</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" th:href="@{/css/tailwind.css}" />
+    <!-- tailwindcss のスタイルシートを消去 -->
     <link rel="stylesheet" th:href="@{/css/style.css}" />
   </head>
   <body>
     <header class="text-center font-bold">
-      <span th:text="${message}" class="text-lg"></span>
+      <span th:text="${message}" class="text-5xl"></span>
     </header>
+
+    <!-- button 追加 -->
+    <div class="w-full h-24 text-center">
+      <button class="btn btn-primary">OK</button>
+    </div>
 
     <script th:src="@{/js/main.bundle.js}"></script>
   </body>

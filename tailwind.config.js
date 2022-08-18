@@ -4,5 +4,6 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  // daisyuiを呼び出す
+  plugins: [require('daisyui')],
 }
